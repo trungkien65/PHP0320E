@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- 	CSS only
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+
+	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
+	<style type="text/css">
+		.row-container{
+			border: 1px solid #fff;
+			border-radius: 20px;
+			margin-top: 15vh;
+			padding: 30px;
+			-webkit-box-shadow: 0px 0px 10px 6px rgba(0,0,0,1);
+			-moz-box-shadow: 0px 0px 10px 6px rgba(0,0,0,1);
+			box-shadow: 0px 0px 10px 6px rgba(0,0,0,1);
+		}
+		body{
+			background-color: #7B76FF;
+		}
+	</style>
+	<script type="text/javascript" src="bai3.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-md-3 col-sm-6 col-sx-12 row-container">
+				<form action="" method="port"id="form" onsubmit="handleSubmit()" onkeypress="inputenter">
+					<h5>Javascript onsubmit event example</h5>
+					<div class="form-group">
+						<label for="name">Name :</label>
+						<input type="text" class="form-control" id="name" placeholder="Enter name">
+					</div>
+					<div class="form-group">
+						<label for="email">Email :</label>
+						<input type="text" class="form-control" id="email" placeholder="Enter mail">
+					</div>
+					<div class="form-group">
+						<label for="contact">Contact No :</label>
+						<input type="text" class="form-control" id="contact" placeholder="Enter Contact No">
+					</div>
+					<button type="submit" class="btn btn-success btn-block">Submit</button>
+					<p id="error"></p>
+					<p id="result"></p>
+				</form>
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>

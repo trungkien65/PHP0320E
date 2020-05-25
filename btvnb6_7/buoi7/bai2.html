@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
+	<style type="text/css">
+		.row-container{
+			border: 1px solid #fff;
+			border-radius: 20px;
+			margin-top: 15vh;
+			padding: 30px;
+			-webkit-box-shadow: 0px 0px 10px 6px rgba(0,0,0,1);
+			-moz-box-shadow: 0px 0px 10px 6px rgba(0,0,0,1);
+			box-shadow: 0px 0px 10px 6px rgba(0,0,0,1);
+		}
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-md-3 col-sm-6 col-sx-12 row-container">
+				<h3>Giải phương trình bậc nhất ax + b = 0 </h3>
+				<form action="" method="port" id="form">
+					<div class="form-group">
+						<label for="innumber">Nhập vào hệ số a :</label>
+						<input type="text" id="innumber1" class="form-control" placeholder="Nhập Số">
+					</div>
+					<div class="form-group">
+						<label for="innumber">Nhập vào hệ số b :</label>
+						<input type="text" id="innumber2" class="form-control" placeholder="Nhập Số">
+					</div>
+					<div class="form-group">
+						<label for="shownumber2">phương trình bậc nhất có dạng :</label>
+						<h4 id="showpt" style="color:blue"></h4>
+					</div>
+					<br/>	
+					<input type="submit" class="btn btn-primary" value="tìm x"></input>
+					<br/>
+					<h3 id="error" style="color:red"></h3>
+					<h4 id="showX" style="color:green"></h4>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var form_opj = document.getElementById('form');
+		form_opj.addEventListener('submit',function ptb1(){
+			var error = '';
+			var showX = '';
+			var showpt = '';
+
+			var num1 = document.getElementById('innumber1').value;
+			var num2 = document.getElementById('innumber2').value;
+		
+			if(1<num1 && num1<10 && 1<num2 && num2<10 ){
+				showpt += parseInt(num1) + "x + " + parseInt(num2) + "= 0";
+				showX = "x = " + -parseInt(num2)/parseInt(num1);
+			}else if(50<num1 && num1<100 && 50<num2 && num2<100 ){
+				showpt += parseInt(num1) + "x + " + parseInt(num2) + "= 0";
+				showX = "x = " + -parseInt(num2)/parseInt(num1);
+			}else{
+				error = "a , b không nằm trong khoảng 1-10 hoặc 50-100";
+			}
+			var opj_error = document.getElementById('error');
+			opj_error.innerHTML = error;
+
+			var opj_showX = document.getElementById('showX');
+			opj_showX.innerHTML = showX;
+
+			var opj_showpt = document.getElementById('showpt');
+			opj_showpt.innerHTML = showpt;
+			event.preventDefault();
+
+			});
+
+	</script>
+</body>
+</html>

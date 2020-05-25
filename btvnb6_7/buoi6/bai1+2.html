@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form Đăng Nhập</title>
+	<style type="text/css">
+		td[colspan="2"]{
+			text-align: center;
+			padding-top: 5px;
+		}
+	</style>
+	<script type="text/javascript" src="jsForm.js"></script>
+</head>
+<body>
+	<h1>Bài 1</h1>
+	<h1>Form Information</h1>
+	<form action="" method="post" id="form" onsubmit="handleSubmit()">
+		<table>
+			<tr>
+				<td>Họ Tên:</td>
+				<td><input type="text" id="input-name" placeholder="Nhập tên của bạn"></td>
+			</tr>
+			<tr>
+				<td> Tuổi : </td>
+				<td><input type="text" id="input-age" placeholder="Nhập tuổi của bạn" name=""></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" id="submit" value="Hiển thị thông tin">
+				</td>
+			</tr>
+		</table>
+			<h3 id="error"></h3>
+			<h3 id="result"></h3>
+	</form>
+
+	<h1>Bài 2</h1>
+	<div class="row justify-content-center">
+		<form action="" method="post" id="form" onsubmit="handleSubmit2()" onkeypress="inputenter(e)">
+			<h1>Form Information</h1>
+		<table>
+			<tr>
+				<td>Họ Tên:</td>
+				<td><input type="text" id="input-name2" placeholder="Nhập tên của bạn"></td>
+			</tr>
+			<tr>
+				<td> Tuổi : </td>
+				<td><input type="text" id="input-age2" placeholder="Nhập tuổi của bạn" name=""></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" id="submit2" value="Show popup">
+				</td>
+			</tr>
+		</table>
+			<h3 id="error2"></h3>
+	</form>
+	</div>
+</body>
+</html>
